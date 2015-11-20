@@ -10,7 +10,7 @@
       name      : "web",
       script    : "www",
       cwd       : "./bin",
-      instances : 0,
+      instances : 4,
       exec_mode : "cluster",
       autorestart: true,
       env: {
