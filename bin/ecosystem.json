@@ -10,7 +10,6 @@
       name      : "web",
       script    : "www",
       cwd       : "/Users/pud/Documents/repo/experiment/pm2-test/bin",
-      exec_mode : "cluster",
       instances : 0,
       autorestart: true,
       env: {
