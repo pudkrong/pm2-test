@@ -21,5 +21,5 @@ npm install pm2 -g
 pm2 deploy <configuration> <environment> setup
 ```
 
-  1.1 PM2 will setup folder structure on the server
+  - PM2 will setup folder structure on the server
 2.
