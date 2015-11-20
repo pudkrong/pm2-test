@@ -33,7 +33,7 @@
       ref  : "origin/master",
       repo : "git@github.com:pudkrong/pm2-test.git",
       path : "/home/ubuntu/www",
-      "post-deploy" : "npm install ; pm2 startOrRestart ecosystem.json --env dev",
+      "post-deploy" : "npm install ; pm2 startOrRestart bin/ecosystem.json --env dev",
       env  : {
         NODE_ENV: "development"
       }
