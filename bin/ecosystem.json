@@ -9,7 +9,7 @@
     {
       name      : "web",
       script    : "www",
-      cwd       : "/Users/pud/Documents/repo/experiment/pm2-test/bin",
+      cwd       : "./bin",
       instances : 0,
       autorestart: true,
       env: {
