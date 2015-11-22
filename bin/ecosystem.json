@@ -9,7 +9,9 @@
     {
       name      : "web",
       script    : "www",
-      cwd       : "./bin",
+      cwd       : "bin",
+      instances : 4,
+      exec_mode : "cluster",
       autorestart: true,
       env: {
         NODE_ENV: "development"
