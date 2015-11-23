@@ -28,11 +28,11 @@
    */
   deploy : {
     dev : {
-      user : "dev",
-      host : "172.16.211.128",
+      user : "ubuntu",
+      host : "54.169.145.134",
       ref  : "origin/master",
       repo : "git@github.com:pudkrong/pm2-test.git",
-      path : "/home/dev/www",
+      path : "~/www",
       "post-deploy" : "npm install ; pm2 startOrRestart bin/ecosystem.json --env dev",
       env  : {
         NODE_ENV: "development"
