@@ -29,7 +29,7 @@
   deploy : {
     dev : {
       user : "ubuntu",
-      host : "54.169.145.134",
+      host : "54.169.132.111",
       ref  : "origin/master",
       repo : "git@github.com:pudkrong/pm2-test.git",
       path : "~/www",
