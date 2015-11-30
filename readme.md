@@ -1,37 +1,51 @@
-# Deployment via PM2
+# Forever vs PM2
 
-Just prototype to show how to use PM2 for deployment
+We try to demostrate how both "forever" and "pm2" handle the requests after restarting
 
-## Prerequisition
+### Forever
 
-1. Server setup with git, pm2, nodejs, npm
-  - Server must be able to checkout from git via ssh without asking any password
-  - PM2 must start on server startup via
-
-```shell
-pm2 startup ubuntu
+1. Start application via forever
+```
+forever start bin/www --forever
 ```
 
-2. Make sure you have setup ssh key on your deployment machine to be able to connect to server via ssh
-
-3. Deployment machine must install pm2
-
-```shell
-npm install pm2 -g
+2. Launch load test application
+```
+loadtest http://localhost:3000 -t 30 -c 20
 ```
 
-## Steps
-
-1. You can setup folder structure on the server via command
-
-```shell
-pm2 deploy <configuration> <environment> setup
+3. Restart process via forever
+```
+forever restartall
 ```
 
-  - PM2 will setup folder structure on the server
-
-2. Deploy via
-
-```shell
-pm2 deploy <configuration> <environment>
+4. Clean up
 ```
+forever stopall
+```
+
+### PM2
+
+1. Start application via pm2
+```
+pm2 start bin/www -i max
+```
+
+2. Launch load test application
+```
+loadtest http://localhost:3000 -t 30 -c 20
+```
+
+3. Restart process via forever
+```
+pm2 restart all
+```
+
+4. Clean up
+```
+pm2 kill
+```
+
+#### Reference
+* forever => https://github.com/foreverjs/forever
+* PM2 => http://pm2.keymetrics.io/
